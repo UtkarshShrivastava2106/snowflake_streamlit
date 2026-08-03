@@ -205,7 +205,8 @@ with col_left2:
                                var_name="Metric", value_name="Count")
         chart = alt.Chart(melted).mark_bar().encode(
             x=alt.X("DEPARTMENT:N", title="Department"),
-            y=alt.Y("Count:Q"), color="Metric:N", xOffset="Metric:N"
+            y=alt.Y("Count:Q"),
+            color="Metric:N",
         )
         st.altair_chart(chart, use_container_width=True)
     else:
